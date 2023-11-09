@@ -1,0 +1,35 @@
+﻿@model CloudReader.Models.CurrentWeather
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>@ViewData["message"]</h1>
+
+<div>
+    <h4>CurrentWeather</h4>
+    <hr />
+    <dl class="row">
+        <dt>
+            Temperatures
+        </dt>
+        <dd>
+            Current Temperature: @Math.Round( Model.main.temp )&deg;C
+        </dd>
+        <dd>
+            Minimum Temperature: @Math.Round( Model.main.temp_min )&deg;C
+        </dd>
+        <dd>
+            Maximum Temperature: @Math.Round( Model.main.temp_max )&deg;C
+        </dd>
+
+        <dd>
+            Humidity: @Html.DisplayFor(model => model.main.humidity) %
+        </dd>
+        <dd>
+            Wind: @Html.DisplayFor(model => model.wind.speed) km/h
+        </dd>
+</div>
+<div>
+    <a asp-action="Index">Search again</a>
+</div>

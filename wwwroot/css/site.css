@@ -1,0 +1,39 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background: #eee url("../Images/day_skies_02.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.text-center {
+    position: relative;
+}
+
+.jumbotron {
+    background-color: #937979;
+    width: 480px;
+    height: 240px;
+    border-radius: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+
+#cloud-searching {
+    margin-top: 3rem;
+}

@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <div class="jumbotron">
+        <h1 class="display-4">Cloud Reader</h1>
+        <div id="cloud-search">
+            <form asp-action="CloudSearch" asp-controller="Home" method="get">
+                <input type="text" name="searchStr" />
+                <input type="submit" value="Search" />
+            </form>
+        </div>
+    </div>
+    
+</div>
