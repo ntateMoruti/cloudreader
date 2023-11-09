@@ -65,8 +65,11 @@ jobs:
           path: ${{env.DOTNET_ROOT}}/cloudreader
 
   deploy:
-    permissions:
-      contents: none
+    steps:
+      - uses: azure/login@v1
+        with:
+          client-id: ntateMoruti
+          client-secret: cloudreadercode
     runs-on: ubuntu-latest
     needs: build
     environment:
